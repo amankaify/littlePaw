@@ -1,0 +1,83 @@
+.createCredentials{
+    display: flex;
+    width: min-content;
+    flex-direction: column;
+    justify-content: left;
+    padding: 50px 50px;
+}
+.inputField{
+    width: 300px;
+    min-width: 100px;
+    height: 40px;
+    margin: 10px;
+    outline: none;
+    font-size: 17px;
+    padding: 0px 10px ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+   text-rendering: auto;
+   max-lines: 1;
+    background-color: rgba(66, 144, 224, 0.05);
+    border-bottom: 2px solid rgb(66, 144, 224);
+}
+
+.backIcon{
+    width: 35px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.brandLogoTwo{
+    display: flex;
+    flex: none;
+    width: 200px;
+    flex: none;
+    padding: 10px 20px;
+}
+.submitButton{
+    width: 120px;
+    height: 40px;
+    margin:10px;
+    outline: none;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(66, 144, 224);
+    cursor: pointer;
+}
+
+.dogcatLogo{
+    width: 30%;
+    position: absolute;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+}
+.labelHeading{
+    font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(66, 144, 224);
+    font-style: italic;
+    font-weight: bold;
+    padding:  20px 20px;
+}
+.createCredentials p{
+    color: rgb(66, 144, 224);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:  0 20px;
+}
+.createCredentials text{
+    color: rgb(5, 137, 71);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:  0 20px;
+    cursor: pointer;
+}

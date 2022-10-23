@@ -1,0 +1,136 @@
+.navBar {
+  background-color: #fff;
+  display: flex;
+  justify-content: left;
+  overflow: auto;
+}
+
+.menu_bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  color: rgb(66, 144, 244);
+  margin-top: 20px;
+  z-index: +1;
+}
+
+.nav-menu {
+  width: 200px;
+  max-height: calc(100vh - 2rem);
+  background-color: #fff;
+  border: 2px solid rgb(66, 144, 244);
+  border-left: none;
+  position: fixed;
+  top: 2px; 
+  left: -100%;
+  padding: 10px 0px 20px 0px;
+  transition: 0.8s;
+  border-radius: 5px;
+  overflow-y: auto;
+  z-index: +1;
+
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 0.8s;
+}
+
+.bar1 {
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  right: -40px;
+  transform: rotate(45deg);
+  background-color: rgb(66, 144, 244);
+}
+.bar2 {
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  right: -40px;
+  transform: rotate(135deg);
+  background-color: rgb(66, 144, 244);
+}
+
+
+.sideButtons {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  width: 170px;
+  height: 40px;
+  margin: 0px 4px 4px 0px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  text-align: left;
+  padding-left: 20px;
+  box-shadow: rgba(66, 144, 224, 0.4) 2px 2px 5px 0.1px;
+  border-radius: 3px;
+  color: rgb(66, 144, 244);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sideButtons:hover {
+  color: #fff;
+  background-color: rgb(66, 144, 244);
+}
+
+.sideUserProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(66, 144, 244);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50px;
+  border: 3px solid rgb(66, 144, 244);
+  margin: 10px 10px 20px 20px;
+  cursor: pointer;
+}
+
+.menu-bars {
+  color: rgb(66, 144, 244);
+}
+.sideLabels{
+    width: 90%;
+    height: 2px;
+    background-color: rgb(66, 144, 244);
+    display: flex;
+    justify-content: left;
+    margin: 20px 10px 20px 0px;
+    text-transform: uppercase;
+    font-weight: bolder;
+   align-self: flex-end;
+}
+
+.nav-menu-items {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  color: rgb(66, 144, 244);
+}
+
+  @media screen and (min-width: 400px) {
+    .navBar {
+        display:  none;
+      }
+      .nav-menu{
+          display: none;
+          overflow-y: auto;
+      }
+    }
+
+@media screen and (max-width: 235px) {
+  .nav-menu {
+    display: none;
+  }
+}

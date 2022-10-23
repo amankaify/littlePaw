@@ -1,0 +1,130 @@
+.categoriesPets{
+  height: 200px;
+  background-color: rgb(165, 207, 249);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px 10px;
+  transition: 0.8s;
+  transition-delay: 5s;
+}
+
+.categoriesPets.active{
+  display: none;
+}
+
+.dropButton{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(66, 144, 224);
+    border-radius:0px 0px 200px 200px ;
+    text-align: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.dropButton button{
+    width: 50px;
+    height: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    border-bottom: 5px solid #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.quote2 p1{
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    color: rgb(66, 144, 224);
+    margin-top:  5%;
+    left: 50%;
+}
+.quote2 p2{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 35%;
+   margin-top: 150px;
+    color: #fff;
+}
+.sittingDog{
+    position: absolute;
+    z-index: +1;
+    width: 150px;
+    left: 10%;
+    padding-top: 67px;
+}
+.arrowUpper{
+   position: absolute;
+   width: 150px;
+   margin-top: 55px;
+   left: 35%;
+}
+
+@media screen and (max-width: 1207px) {
+
+    .quote2 p1{
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        color: rgb(66, 144, 224);
+        margin-top:  5%;
+        left: 50%;
+    }
+
+    .quote2 p2{
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        /* left: -35%; */
+        color: #fff;
+    }
+    .arrowUpper{
+        position: absolute;
+        width: 100px;
+        margin-top: 55px;
+        left: 35%;
+     }
+  }
+
+  
+@media screen and (max-width: 1207px) {
+
+    .quote2 p1{
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        color: rgb(66, 144, 224);
+        margin-top:  5%;
+        left: 50%;
+    }
+
+    .quote2 p2{
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        /* left: -35%; */
+        color: #fff;
+    }
+    .arrowUpper{
+        position: absolute;
+        width: 100px;
+        margin-top: 55px;
+        left: 35%;
+     }
+  }
+
+  @media screen and (max-width: 1020px) {
+
+    .quote2 p1{
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        color: rgb(66, 144, 224);
+        margin-top:  8%;
+        left: 50%;
+    }
+  }

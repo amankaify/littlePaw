@@ -1,0 +1,164 @@
+.topNavigation {
+  display: block;
+  border-bottom: 2px solid rgb(66, 144, 224);
+  height: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  justify-content: space-between;
+  z-index: +1;
+}
+.brandLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  align-items: center;
+}
+
+.littleLogo {
+  width: 100px;
+  box-sizing: border-box;
+}
+.searchBar {
+  width: 500px;
+  min-width: 50px;
+  min-height: 10px;
+  height: 30px;
+  border: 3px solid rgb(66, 144, 244);
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(66, 144, 244);
+  font-weight: bold;
+}
+
+.locationDiv {
+  width: 150px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  padding: 0px 20px 0px 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userlocationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.locationDiv text {
+  color: rgb(66, 144, 244);
+  font-weight: bold;
+
+}
+
+.locationIcon {
+  width: 30px;
+  flex: none;
+}
+
+.buttonsBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  padding: 0px 20px 0px 20px;
+  align-items: center;
+}
+.topButton {
+  width: 40px;
+  cursor: pointer;
+}
+
+
+.sideNavigation{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: -150px;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  color: rgb(66, 144, 224);
+  font-weight: bold;
+  border-radius: 20px;
+  border-style: solid;
+  padding: 10px 10px;
+  border-left: #fff;
+  transition: 0.3s;
+}
+
+.burgerButton {
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 10px;
+  align-self: flex-end;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.burgerButton .bar1 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(66, 144, 224);
+}
+.burgerButton .bar2 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(66, 144, 224);
+}
+.burgerButton .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(66, 144, 224);
+}
+
+.menusList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: #fff;
+  padding: 20px 0px;
+}
+.menusList button {
+  border-bottom: 4px solid rgb(66, 144, 224);
+  background-color: #fff;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 20px;
+  padding-left: 20px;
+  width: 150px;
+  height: 35px;
+  color: rgb(66, 144, 224);
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .buttonsBar {
+     display: none;
+   }
+   .locationDiv {
+    display: none;
+  }
+  .brandLogo{
+    display: none;
+  }
+ }
+

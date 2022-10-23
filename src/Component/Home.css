@@ -1,0 +1,28 @@
+.navBar {
+  width: auto;
+  height: 70px;
+  background-color: rgb(66, 145, 224);
+  display: flex;
+  flex-direction: row;
+  gap: 700px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: default;
+}
+.menusNavigation {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.productsButton, .adoptButton, .consultButton {
+  width: 90px;
+  cursor: pointer;
+}
+
+.homeButton, .loginButton{
+  width: 30px;
+  cursor: pointer;
+}
+

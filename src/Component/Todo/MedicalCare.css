@@ -1,0 +1,226 @@
+.medicalCare_Div1 {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(66, 144, 224);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+}
+.medicalCare_Div2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(4, 40, 77);
+}
+.medicalCare_Div2 text {
+  color: #ffff;
+  padding-left: 80px;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.medicalCare_Div2 .burgerBUtton {
+    padding-left: 50px;
+}
+
+.medicalButton {
+  width: 250px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 70px;
+  left: -100em;
+  gap: 20px;
+  padding: 20px 0px;
+  position: absolute;
+  transition: 1s;
+  z-index: +1;
+  overflow-x: scroll;
+  background-color: rgb(153, 174, 195);
+  box-shadow: rgba(4, 40, 77, 1) 0px 10px 15px 2px;
+}
+.medicalButton.active {
+    left: 0em;
+    transition: 0.8s;
+}
+
+.burgerBUtton{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.burgerBUtton div{
+    width: 35px;
+    height: 2px;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+
+.medicalButton button {
+  width: 85%;
+  height: 40px;
+  min-height: 40px;
+  text-align: left;
+  min-width: 150px;
+  padding-left: 20px;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 20px;
+  color: #ffff;
+  background-color: rgb(66, 144, 224);
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(4, 40, 77, 0.4) 0px 1px 5px 2px;
+}
+.medicalButton button:hover {
+  width: 85%;
+  color: rgb(66, 144, 224);
+  background-color: #fff;
+}
+
+.medical_row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 10px 20px;
+  width: 90%;
+  align-items: center;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.medicalProducts{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: 370px;
+  padding: 20px 20px;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 0.271);
+  overflow-y: scroll;
+}
+
+.medicalDisable.active{
+  display: flex;
+  align-self: flex-end;
+  margin-left: -20px;
+  width:100%;
+  height: 370px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+}
+.medicalDisable{
+  display: none;
+}
+.medical_individual{
+  background-color: rgba(255, 255, 255, 0.337);
+  height: 350px;
+  max-height: 350px;
+  width: 350px;
+  border-radius: 10px;
+  min-width: 350px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap:5px;
+  display: flex;
+  flex-direction: column;
+}
+.medicalItem{
+  display: flex;
+  width: 80%;
+  max-width: 80%;
+  min-width: 80%;
+  height: 80%;
+  min-height: 80%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  text-decoration: none;
+}
+.medical_Img{
+  width: 80%;
+  max-width: 80%;
+  height: 75%;
+  min-height: 75%;
+  max-height: 75%;
+  border: 2px solid rgb(66, 144, 224);
+object-fit: contain;
+background-color: #fff;
+}
+
+.medical_individual button{
+  width: 75%;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(4, 40, 77);
+  cursor: pointer;
+ 
+}
+
+
+.medicalName{
+  font-size: 1.6ex;
+  width: 90%;
+  height: 19%;
+  overflow-x: hidden;
+  text-align: center;
+  color: black;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+
+}
+
+
+.medicalDescription.active{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: +1;
+  width: 50%;
+  height: 370px;
+  background-color: #fff;
+  padding: 10px;
+  left: 25%;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  border: 2px solid rgb(4, 40, 77);
+  font-size: 20px;
+  transition: 0.8s;
+}
+.medicalDescription{
+display: none;
+}
+
+.medicalDescription p{
+  align-self: flex-start;
+  overflow-x: scroll;
+  font-size : 1.3vw;
+  max-width: 45%;
+}
+
+.description_Close{
+  width: 100px;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 10px;
+  background-color: rgb(4, 40, 77);
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+

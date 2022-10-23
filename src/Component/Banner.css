@@ -1,0 +1,183 @@
+.bannerProducts {
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+.royalcaninLogo {
+  width: 30%;
+  position: absolute;
+  left: 10%;
+  transition: 0.8s;
+  transition-delay: 0.3s;
+}
+.royalcaninPacket {
+  width: 20%;
+  position: absolute;
+  left: -30%;
+  transition: 0.8s;
+  transition-delay: 0.3s;
+  z-index: +1;
+}
+
+.dogHead {
+  width: 25%;
+  position: absolute;
+  right: 10%;
+  transition: 0.8s;
+  transition-delay: 0.3s;
+}
+.quote1 {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(66, 144, 224);
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-top: 20px;
+  transition: 0.8s;
+  transition-delay: 0.3s;
+}
+
+.buyNow {
+  position: absolute;
+  top: 55%;
+  left: -20%;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(225, 2, 2);
+  transition: 1s;
+  transition-delay: 0.3s;
+  cursor: pointer;
+}
+.productDetails {
+  left: -100%;
+  top: 20%;
+  position: absolute;
+  transition: 1s;
+  transition-delay: 0.3s;
+}
+
+.productDetails p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.bannerProducts:hover .royalcaninLogo {
+  left: 60%;
+}
+.bannerProducts:hover .royalcaninPacket {
+  left: 7%;
+}
+.bannerProducts:hover .buyNow {
+  left: 30%;
+}
+.bannerProducts:hover .dogHead {
+  width: 0%;
+}
+.bannerProducts:hover .quote1 {
+  left: 56%;
+}
+.bannerProducts:hover .productDetails {
+  left: 30%;
+}
+
+@media screen and (max-width: 1111px) {
+  .quote1 {
+   display: none;
+  }
+  .productDetails {
+    left: -30%;
+    top: 25%;
+    position: absolute;
+    transition: 1s;
+    transition-delay: 0.3s;
+  }
+  
+
+}
+@media screen and (max-width: 970px) {
+  .buyNow {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    top: 40%;
+  }
+  .productDetails {
+    left: -30%;
+    top: 15%;
+    position: absolute;
+    transition: 1s;
+    transition-delay: 0.3s;
+  }
+  .productDetails p {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .bannerProducts {
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
+}
+
+
+@media screen and (max-width: 810px) {
+  .buyNow {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    top: 40%;
+  }
+  .productDetails {
+    left: -30%;
+    top: 20%;
+    position: absolute;
+    transition: 1s;
+    transition-delay: 0.3s;
+  }
+  .productDetails p {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .bannerProducts {
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
+}
+
+
+@media screen and (max-width: 580px) {
+.bannerProducts{
+  display: none;
+}
+
+}
+
