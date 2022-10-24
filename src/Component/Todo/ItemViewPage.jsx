@@ -3,17 +3,26 @@ import TopNavigation from "../TopNavigation";
 import "./ItemView.css";
 import { Rating } from "react-simple-star-rating";
 import { useState, useEffect } from "react";
-import {  useLocation } from "react-router-dom";
-import {eyes}from "../ItemsList/Medi_Eyes";
+import { useLocation } from "react-router-dom";
+import { eyes } from "../ItemsList/Medi_Eyes";
+import { ears } from "../ItemsList/Medi_Ear";
+import { illnesses } from "../ItemsList/Medi_Illnesses";
+import {foods} from "../ItemsList/Foods";
+import { dentals } from "../ItemsList/Medi_Dentals";
+import { beds } from "../ItemsList/Beds";
+import { toys } from "../ItemsList/Toys";
 import Suggestions from "../Suggestions";
 
 export default function ItemViewPage() {
   const { state } = useLocation();
+ 
 
   return (
     <>
       <TopNavigation />
-      <ItemMainView data={state} />
+      <ItemMainView
+        data={state}
+      />
     </>
   );
 }
@@ -23,30 +32,108 @@ function ItemMainView({ data }) {
     <>
       <div className="productViewPanel">
         <ImageSection data={data} />
-        <DetailSection data={data} />
-        <SuggestionPanel data={data}/>
+        <DetailSection data={data}  />
+        <SuggestionPanel data={data} />
       </div>
     </>
   );
 }
 
-function SuggestionPanel() {
-return(
-  <div className="rightPanel">
-        <h3>Suggestions</h3>
-        <div className="rightPanel_Suggestions">
+function SuggestionPanel({data}) {
+
+ 
+useEffect(() => {
+  loadSuggestion();
+}, [])
+
+const[activeSuggest, setSuggest] = useState("");
+
+const loadSuggestion = () =>{
+ setSuggest(data?.category)
+};
+
+const visibleCategory = (value) => {
+  switch(value) {
+    case 'eye':
+      return (
+        <div>
           {eyes.map((eye) => {
-            return (
-              <Suggestions data={eye}/>
-            )
+            return <Suggestions  data={eye}  />;
           })}
         </div>
+      )
+    
+    case 'dental':
+      return (
+        <div>
+          {dentals.map((dental) => {
+            return <Suggestions data={dental} />;
+          })}
+        </div>
+      )
+    case 'toy':
+      return (
+        <div>
+          {toys.map((toy) => {
+            return <Suggestions data={toy} />;
+          })}
+        </div>
+      )
+    case 'ear':
+      return (
+        <div>
+          {ears.map((ear) => {
+            return <Suggestions data={ear} />;
+          })}
+        </div>
+      )
+    case 'illness':
+      return (
+        <div>
+          {illnesses.map((illness) => {
+            return <Suggestions data={illness} />;
+          })}
+        </div>
+      )
+    case 'bed':
+      return (
+        <div>
+          {beds.map((bed) => {
+            return <Suggestions data={bed} />;
+          })}
+        </div>
+      )
+    case 'food':
+      return (
+        <div>
+          {foods.map((food) => {
+            return <Suggestions data={food} />;
+          })}
+        </div>
+      )
+ 
+    default:
+      return (
+        <div>
+          {eyes.map((eye) => {
+            return <Suggestions data={eye} />;
+          })}
+        </div>
+      )
+  }
+}
+
+  return (
+    <div className="rightPanel" >
+      <h3>Suggestions</h3>
+      <div className="rightPanel_Suggestions">
+      {visibleCategory(activeSuggest)}
       </div>
-)
+    </div>
+  );
 }
 
 function ImageSection({ data }) {
-  console.log("data", data);
   const [mainImage, setMainImage] = useState(data?.images_array[0]);
   return (
     <div className="productImagesPanel">

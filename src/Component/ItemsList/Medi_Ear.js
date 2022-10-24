@@ -1,6 +1,7 @@
 const ears = [
     {
         id:1,
+        category: "ear",
         name:'Vivaldis Clearify : Tris EDTA - Ear Cleansing Solution with Antibacterial Properties - 100ml',
         brand:"VIVALDIS",
         rating:85,
@@ -15,7 +16,7 @@ const ears = [
         ]
     },
     {
-        id:2,
+        id:2,category: "ear",
         name:'Medfly Healthcare OTISHIELD Ear Cleansing Solution for Dogs (50 ml)',
         brand:"Medfly",
         rating:85,
@@ -30,7 +31,7 @@ const ears = [
         ]
     },
     {
-        id:3,
+        id:3,category: "ear",
         name:'Petvit Eye Tear Stain Remover Wipes for Dogs and Cats ',
         brand:"Petvit",
         rating:70,
@@ -45,7 +46,7 @@ const ears = [
         ]
     },
     {
-        id:4,
+        id:4,category: "ear",
         name:'Cature Care by Nature Natural Ear Cleaning Solution for Dog & Cat 120 ml (120 ML)',
         brand:"Cature",
         rating:90,
@@ -60,7 +61,7 @@ const ears = [
         ]
     },
     {
-        id:5,
+        id:5,category: "ear",
         name:'Pet Believe Exclsuive Body Hypoallergenic Dog & Cat Wipes Wet for Ears Eyes Face Butt Paw (Pack of 100)',
         brand:"Per Believe",
         rating:90,

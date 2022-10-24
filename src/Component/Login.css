@@ -23,6 +23,13 @@
     border-bottom: 2px solid rgb(66, 144, 224);
 }
 
+.inputsRow{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    align-items: center;
+}
+
 .backIcon{
     width: 35px;
     padding-left: 20px;

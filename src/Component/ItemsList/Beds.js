@@ -1,6 +1,7 @@
 const beds = [
   {
     id: 1,
+    category: "bed",
     name: "Better Than Basics Sofa Bed for Dogs - Red",
     price: 2700,
     brand:"Brand NAME",
@@ -16,7 +17,7 @@ const beds = [
     ],
   },
   {
-    id: 2,
+    id: 2,    category: "bed",
     name: "KOZI PET Rectangular Shaped Oxford",
     price: 375,
     brand:"Brand NAME",
@@ -31,7 +32,7 @@ const beds = [
     ],
   },
   {
-    id: 3,
+    id: 3,    category: "bed",
     name: "Sofa Bed For Dogs & Cats - Aqua Blue",
     price: 2799,
     brand:"RESPLOOT",
@@ -47,7 +48,7 @@ const beds = [
     ],
   },
   {
-    id: 4,
+    id: 4,    category: "bed",
     name: "HUFT Nap Now Lounger Dog Bed (Free Cushion) - Black",
     price: 3699,
     brand:"HUFT",
@@ -63,7 +64,7 @@ const beds = [
     ],
   },
   {
-    id: 5,
+    id: 5,    category: "bed",
     name: "Avika Wooden Bamboo Cane Pet Bed For Dogs",
     price: 2647,
     brand:"AVIKA",
@@ -79,7 +80,7 @@ const beds = [
     ],
   },
   {
-    id: 6,
+    id: 6,    category: "bed",
     name: "Little Smile Affluent Soft Ethinic Designer Bed",
     price: 1599,
     brand:"LITTLE SMILE",

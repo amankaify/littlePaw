@@ -1,6 +1,7 @@
 const foods = [
   {
     id: 1,
+    category: "food",
     name: "Pedigree PRO, 20kg Pack",
     price: 4690,
     rating: 60,
@@ -18,6 +19,7 @@ const foods = [
   },
   {
     id: 2,
+    category: "food",
     name: "Pedigree Wet Food for Puppy",
     price: 525,
     rating: 60,
@@ -33,6 +35,7 @@ const foods = [
   },
   {
     id: 3,
+    category: "food",
     name: "Royal Canin Shih Tzu Adult Dry Dog Food 1.5 Kg",
     price: 1503,
     rating: 60,
@@ -48,6 +51,7 @@ const foods = [
   },
   {
     id: 4,
+    category: "food",
     name: "Kennel Kitchen Adult & Puppy Dog Food, Chicken and Lamb Chunks in Gravy, 12 Pouches",
     price: 391,
     rating: 60,
@@ -63,6 +67,7 @@ const foods = [
   },
   {
     id: 5,
+    category: "food",
     name: "Drools Chicken and Egg Adult Dry Dog Food, 10kg",
     price: 1685,
     size: null,
@@ -77,6 +82,7 @@ const foods = [
   },
   {
     id: 6,
+    category: "food",
     name: "Pedigree Tasty Minis Treats for Puppy, Chicken Flavour, 125g",
     price: 154,
     rating: 60,
@@ -93,6 +99,7 @@ const foods = [
   },
   {
     id: 7,
+    category: "food",
     name: "Drools Trumppetz Focus Adult Super Dog Food, 12kg",
     price: 4099,
     size: null,
@@ -107,6 +114,7 @@ const foods = [
   },
   {
     id: 8,
+    category: "food",
     name: "Pedigree Dentastix Oral Care Treats for Small Breed Adult Dogs (5-10 kg), 28 Sticks, 440g Monthly Pack",
     price: 456,
     size: null,
@@ -121,6 +129,7 @@ const foods = [
   },
   {
     id: 9,
+    category: "food",
     name: "Pedigree Biscrok Biscuit Treats for Dogs (Above 4 Months), Chicken Flavour, 900g Pack",
     price: 220,
     rating: 60,
@@ -136,6 +145,7 @@ const foods = [
   },
   {
     id: 10,
+    category: "food",
     name: "Pedigree Puppy Starter Kit",
     price: 289,
     rating: 60,

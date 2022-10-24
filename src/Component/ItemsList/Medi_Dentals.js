@@ -1,6 +1,7 @@
 const dentals = [
     {
       id: 1,
+      category: "dental",
       name: "Trixie: - Tooth Brush Set | Finger Brush for Dogs and Cats | Made with Soft Bristles to Gently Clean Teeth, Prevent Gum Disease and Tooth Decay | Helps in Providing Dental Care – Pack of 2 (6cm)",
       price: 145,
       brand: "Trixie",
@@ -16,7 +17,7 @@ const dentals = [
       ],
     },
     {
-      id: 2,
+      id: 2,  category: "dental",
       name: "Pet Me Tartar Control Dental Hygiene Toothpaste Dogs, Cats, Dog Toothbrush & Finger Brush - Dog Teeth Cleaning Kit, Dog Toothpaste Kit from Pet Me, Dog Dental Care (Toothpaste + 2 Tooth Brushes)",
       price: 270,
       brand: "Pet Me",
@@ -32,7 +33,7 @@ const dentals = [
       ],
     },
     {
-      id: 3,
+      id: 3,  category: "dental",
       name: "Meat Up Dental Treats, Oral Care Dog Treats- 7 Sticks, 165g (Buy 1 Get 1 Free)",
       price: 199,
       brand: "Meat Up Store",
@@ -48,7 +49,7 @@ const dentals = [
       ],
     },
     {
-      id: 4,
+      id: 4,  category: "dental",
       name: "Happi Doggy Gluten- Free Dog Dental Care Oil Treats Mint For All Life Stages, 150 g",
       price: 449,
       brand: "Happy Doggy Store",
@@ -63,7 +64,7 @@ const dentals = [
       ],
     },
     {
-      id: 5,
+      id: 5,  category: "dental",
       name: 'Pets Empire Pet Dog Toothpaste Dental Clean Oral Health Care Fresh Breath Plaque Removal Aid -100 GMS Mint Flavor (Pack of 2)',
       price: 249,
       brand: "Pets Empire Care",

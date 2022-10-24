@@ -1,6 +1,7 @@
 const skins = [
     {
         id:1,
+        category: "food",
         name:'Pet Royale Dog Shampoo for Pet & Dog Dandruff & Itch with Conditioner - Dog Lavender Shampoo - Skin moisturization, Coat Conditioning & Natural Deodorization - Spa Care Lavender 300ml',
         brand:"Petroyale",
         rating:85,
@@ -15,7 +16,7 @@ const skins = [
         ]
     },
     {
-        id:2,
+        id:2, category: "food",
         name:'WIGGLES Hemp Seed Oil for Dogs Cats Pain Anxiety Relief, 30ml - Pet Joint Support Stress Calming Massage Oil - Skin Coat Allergies Care Herbal Extract (Pack of 1)',
         brand:"Wiggles Store",
         rating:95,
@@ -30,7 +31,7 @@ const skins = [
         ]
     },
     {
-        id:3,
+        id:3, category: "food",
         name:'Pet Royale Dog Skin and Coat Supplement for Dog Cat | Skin Coat for Dog Puppy Kitten Persian cat | Dog Supplement multivitamin | Dog Skin Care | Dog Supplements | Protein | Pack of 1 | 60 Tablets',
         brand:"Pet Royale",
         rating:100,
@@ -44,7 +45,7 @@ const skins = [
         ]
     },
     {
-        id:4,
+        id:4, category: "food",
         name:'Pawstively pet care Sky EC Star Coat Skin and Tonic Supplement Enriched with Omega and Biotin for Dogs and Cats (200 ml) - Pack of 2',
         brand:"Pawstively",
         rating:90,
@@ -58,7 +59,7 @@ const skins = [
         ]
     },
     {
-        id:5,
+        id:5, category: "food",
         name:'Fur-Drop 150gms Dog Deo Cream, Deodorant, Dog Odour Remover, Dog Skin Care Products, Pet Naturals, Herbal, Lavender, Coat Conditioner, pet Deodorizer, Dog Cologne, No Artificial Fragrance.',
         brand:"Fur Drop",
         rating:70,

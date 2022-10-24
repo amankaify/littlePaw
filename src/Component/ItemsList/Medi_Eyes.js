@@ -1,6 +1,7 @@
 const eyes = [
   {
       id:1,
+      category: "eye",
       name:'Petvit Eye Tear Stain Remover Wipes for Dogs and Cats l Keep Your Pets Eye Area Clean & Healthy - Fragrance Less 50 Wipes | for All Age Group',
       brand:"Petvit Store",
       rating:85,
@@ -15,7 +16,7 @@ const eyes = [
       ]
   },
   {
-      id:2,
+      id:2,category: "eye",
       name:'Petterati Pet Sanitizer | Lavender | 250ml | BKC & Alcohol Free | Safe for Both Dogs & Cats | Kills 99.9% Germs | with The Goodness of Aloe Vera & Vitamin E | for Fur & Paws (Pack of 1)',
       brand:"Petterati",
       rating:70,
@@ -30,7 +31,7 @@ const eyes = [
       ]
   },
   {
-      id:3,
+      id:3,category: "eye",
       name:'24x7 eMall Pet Tear Stain Remover - Cleans Dog Tear Stains – 50 ML Great for Dogs and Cats Eye Care',
       brand:"24x7",
       rating:40,
@@ -45,7 +46,7 @@ const eyes = [
       ]
   },
   {
-      id:4,
+      id:4,category: "eye",
       name:'Tearstain Remover (Eye-Care) for Dogs',
       brand:"Trixie Store",
       rating:60,
@@ -60,7 +61,7 @@ const eyes = [
       ]
   },
   {
-      id:5,
+      id:5,category: "eye",
       name:'Miracle Care Eye Clear Cleaning Pads, 90-Count',
       brand:"Miracle Care",
       rating:90,

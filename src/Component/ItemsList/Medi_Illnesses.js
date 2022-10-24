@@ -1,6 +1,7 @@
 const illnesses = [
   {
     id: 1,
+    category: "illness",
     name: "Digyton Plus Syrup for Dogs & Cats | 30 ml",
     price: 114,
     brand: "Generic",
@@ -13,7 +14,7 @@ const illnesses = [
     ],
   },
   {
-    id: 2,
+    id: 2, category: "illness",
     name: "Asbrip Antibacterial & Antiviral Pet Cough Syrup 150ML",
     price: 1200,
     brand: "Generic",
@@ -29,7 +30,7 @@ const illnesses = [
     ],
   },
   {
-    id: 3,
+    id: 3, category: "illness",
     name: "Vivaldis VI-FI Forte 2.68ml - Single Pipette : spot on for Prevention & Treatment of Fleas, Ticks and Chewing lice infestation for Dogs Weighing from 20 to 40 Kgs.",
     price: 385,
     brand: "Vivaldis",
@@ -43,7 +44,7 @@ const illnesses = [
     ],
   },
   {
-    id: 4,
+    id: 4, category: "illness",
     name: "BRONTIX 3 in 1 - Reflective Dog Harness - Dog Body Belt - Harness for Dogs Large Size - Harness for Dogs Medium Size - Body Belt for Dogs - Dog Vest",
     price: 220,
     brand: "Wiggles Store",
@@ -57,7 +58,7 @@ const illnesses = [
     ],
   },
   {
-    id: 5,
+    id: 5, category: "illness",
     name: 'Pawsitively Pet Care Vivaldis Relaxzyme Natural Enzyme Based Supplement Tablets for Dogs and Cats - 10 Tabs',
     price: 220,
     brand: "Pawistively Pet Care",

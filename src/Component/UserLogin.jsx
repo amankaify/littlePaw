@@ -5,11 +5,10 @@ import { ReactComponent as BackIcon } from "../assets/back.svg";
 import { ReactComponent as CatLogo } from "../assets/welcomedog.svg";
 import { useForm } from "react-hook-form";
 import { Form, Button } from "semantic-ui-react";
-
 import "./Login.css";
+import { useState } from "react";
 
 const UserLogin = () => {
-
   const navigate = useNavigate();
 
   const {
@@ -25,32 +24,38 @@ const UserLogin = () => {
   return (
     <>
       <div className="createCredentials">
-      <BackIcon className="backIcon" onClick={() => navigate("/")}/>
-      <BrandIcon className="brandLogoTwo" />
+        <BackIcon className="backIcon" onClick={() => navigate("/")} />
+        <BrandIcon className="brandLogoTwo" />
         <div className="labelHeading">Login into your account.</div>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Field>
-            <input
-              placeholder="User ID "
-              type="email"
-              className="inputField"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              })}
-            />
+            <div className="inputsRow">
+              <input
+                placeholder="User ID "
+                type="email"
+                className="inputField"
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value:
+                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  },
+                })}
+              />
+            </div>
           </Form.Field>
           <Form.Field>
-            <input
-              placeholder="Password "
-              type="password"
-              className="inputField"
-              {...register("password", {
-                required: true,
-                maxLength: 15
-              })}
-            />
+            <div className="inputsRow">
+              <input
+                placeholder="Password "
+                type="password"
+                className="inputField"
+                autoComplete="off"
+                {...register("password", {
+                  required: true,
+                })}
+              />
+            </div>
           </Form.Field>
           <Button type="submit" className="submitButton">
             LOGIN

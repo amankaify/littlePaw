@@ -151,6 +151,7 @@ function Item({
   setCartItemsData,
 }) {
   const { name, price, image, rating } = data;
+  
   const itemDetails = {
     itemCount: 1,
   };

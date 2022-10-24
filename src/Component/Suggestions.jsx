@@ -4,10 +4,12 @@ import "../Component/Todo/ItemView.css";
 
 export default function Suggestions({ data }) {
   const { name, image } = data;
-
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // };
   return (
     <>
-      <Link
+      <Link 
         to={{ pathname: `/item/${name}` }}
         state={data}
         className="suggestionItem"
