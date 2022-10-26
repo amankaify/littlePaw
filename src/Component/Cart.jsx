@@ -6,8 +6,10 @@ import "./Products.css";
 import "./Cart.css";
 import "./Wishlist.css";
 import { Link } from "react-router-dom";
+import AddressModule from "./AddressModule";
 
 export default function Cart() {
+
   const [wishlistItems, setWishlistItems] = useState(() => {
     const saved = localStorage.getItem("wishlist");
     const initialValue = JSON.parse(saved);
@@ -99,11 +101,12 @@ export default function Cart() {
                   setCartItemsData={setCartItemsData}
                   wishlistItems={wishlistItems}
                   setWishlistItems={setWishlistItems}
-                />
+                  />
+                  
               );
             })}
           </div>
-          <TotalContainer />
+          <TotalContainer cartItemData={cartItemData} />
           <span>
             <div className={emptyMessage ? "empty_Msg active" : "empty_Msg"}>
               <p>Sorry! You have no items in your list.</p>
@@ -171,6 +174,13 @@ function Item({
     setCartItemsData(cartArray);
   };
 
+  const [addedQty, setAddedQty] = useState(0);
+
+  let qtyPrice=0;
+  const handleQuantity = () => {
+    setAddedQty(qtyPrice+=data?.price)
+  }
+
   const [quantity, setQuantity] = useState(itemDetails);
 
   if (quantity.itemCount === 0) return;
@@ -216,15 +226,7 @@ function Item({
               <button
                 className="qntButton"
                 disabled={quantity.itemCount >= 10}
-                onClick={() =>
-                  setQuantity({
-                    ...quantity,
-                    itemCount: quantity.itemCount + 1,
-                  })
-                }
-              >
-                +
-              </button>
+                onClick={() =>{setQuantity({...quantity,itemCount: quantity.itemCount + 1,},handleQuantity(data))}}>+</button>
             </div>
             <div>
               <button
@@ -252,16 +254,24 @@ function Item({
   );
 }
 
-function TotalContainer() {
+function TotalContainer({cartItemData,addedQty}) {
+
+  let totalPrice=0;
+  let i=0;
+  for(i;i<cartItemData.length;i++){
+    totalPrice+= cartItemData[i]?.price;   
+  }
+  
   const shippingItemDetails = {
-    itemCount: "0",
+    itemCount:cartItemData.length,
     shipingAddress: "Address",
     billingDetails: "Billing Details",
-    itemsPrice: "0",
+    itemsPrice: totalPrice,
     itemDiscount: "0",
-    itemsTotalPrice: "0",
+    itemsTotalPrice: addedQty,
     itemDeliveryCharges: "0",
   };
+
 
   const [shippingValues] = useState(shippingItemDetails);
 
@@ -286,7 +296,7 @@ function TotalContainer() {
         </div>
         
         <button className="buttonNavChangeAddrs">Change Address</button>
-
+      
         <div className="row">
           <h4>Price:</h4>
           <p>{shippingValues.itemsPrice}</p>
@@ -311,6 +321,7 @@ function TotalContainer() {
 
         <button className="buttonNav">Procced To Buy</button>
       </div>
+      <AddressModule/>
     </>
   );
 }

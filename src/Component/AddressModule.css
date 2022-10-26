@@ -1,0 +1,75 @@
+.adrs_Panel {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: auto;
+    width: 80%;
+    /* right: 20px; */
+    /* max-width: 200px;
+    min-width: 200px; */
+    height: 80%;
+    padding: 5px 1%;
+    /* min-height: 40px;
+    max-height: 40px; */
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid rgb(66, 144, 224);
+    translate: 9% 5%;
+}
+
+.adrs_Panel p {
+    align-self: flex-start;
+    color: rgb(66, 144, 224);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.addrsPartitonBar {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    grid-row: 2;
+    gap: 40px;
+    grid-column: 4;
+    width: 95%;
+    height: 60%;
+    border-top: 2px solid rgb(66, 144, 224);
+}
+
+.adrs_Block {
+    display: block;
+    justify-content: center;
+    padding: 2px 10px 2px 10px;
+    align-content: inherit;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid rgb(66, 144, 224);
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+.active_address_Selected{
+    border: 5px solid rgb(66, 144, 224);
+    box-shadow: rgb(165, 163, 163) 0px 10px 10px  ;
+}
+
+.adrs_Block p {
+    color: black;
+    font-size: 1vw;
+}
+
+
+
+.adrs_Block h5 {
+    color: rgb(66, 144, 224);
+}
+
+.adrs_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
