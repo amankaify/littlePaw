@@ -9,17 +9,9 @@ import { Link } from "react-router-dom";
 import AddressModule from "./AddressModule";
 
 export default function Cart() {
-  const [wishlistItems, setWishlistItems] = useState(() => {
-    const saved = localStorage.getItem("wishlist");
-    const initialValue = JSON.parse(saved);
-    return initialValue || "";
-  });
+  const [wishlistItems, setWishlistItems] = useState([]);
 
-  const [cartItemData, setCartItemsData] = useState(() => {
-    const saved = localStorage.getItem("items");
-    const initialValue = JSON.parse(saved);
-    return initialValue || "";
-  });
+  const [cartItemData, setCartItemsData] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(cartItemData));
@@ -32,6 +24,7 @@ export default function Cart() {
   const [wishlist, setWishlist] = useState(false);
 
   const [emptyMessage, setemptyMessage] = useState(false);
+  
   const showemptyMessage = () => {
     if (wishlistItems.length === 0) {
       setemptyMessage(!emptyMessage);
@@ -64,6 +57,7 @@ export default function Cart() {
     let modifedArray = arr.filter((i) => i.name !== data.name);
     setWishlistItems(modifedArray);
   };
+
 
   return (
     <>
@@ -171,13 +165,6 @@ function Item({
     setCartItemsData(cartArray);
   };
 
-  const [addedQty, setAddedQty] = useState(0);
-
-  let qtyPrice = 0;
-  const handleQuantity = () => {
-    setAddedQty((qtyPrice += data?.price));
-  };
-
   const [quantity, setQuantity] = useState(itemDetails);
 
   if (quantity.itemCount === 0) return;
@@ -226,8 +213,7 @@ function Item({
                 disabled={quantity.itemCount >= 10}
                 onClick={() => {
                   setQuantity(
-                    { ...quantity, itemCount: quantity.itemCount + 1 },
-                    handleQuantity(data)
+                    { ...quantity, itemCount: quantity.itemCount + 1 }
                   );
                 }}
               >
@@ -260,7 +246,7 @@ function Item({
   );
 }
 
-function TotalContainer({ cartItemData, addedQty }) {
+function TotalContainer({ cartItemData }) {
   let totalPrice = 0;
   let i = 0;
   for (i; i < cartItemData.length; i++) {
@@ -271,7 +257,7 @@ function TotalContainer({ cartItemData, addedQty }) {
     itemCount: cartItemData.length,
     itemsPrice: totalPrice,
     itemDiscount: "0",
-    itemsTotalPrice: addedQty,
+    itemsTotalPrice:"",
     itemDeliveryCharges: "0",
   };
 

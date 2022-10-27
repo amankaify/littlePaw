@@ -61,7 +61,7 @@ export default function AddressModule({ data, changeAddrs,handleShowAddress }) {
       <div className="adrs_Panel">
         <div className="adrs_row">
           <p>Current Address:</p>
-          <button className="add_Address">New +</button>
+          <button className="add_Address">New + </button>
         </div>
         <div className="default_Address">
           <div className="addrs_grid">
