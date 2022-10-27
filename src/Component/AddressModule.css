@@ -2,17 +2,15 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    align-items: center;
     justify-content: space-between;
-    grid-area: auto;
     width: 80%;
-    /* right: 20px; */
-    /* max-width: 200px;
-    min-width: 200px; */
+    max-width: 80%;
+    min-width: 80%;
+    gap: 10px;
     height: 80%;
     padding: 5px 1%;
-    /* min-height: 40px;
-    max-height: 40px; */
+    min-height: 80%;
+    max-height: 80%;
     background-color: #fff;
     border-radius: 10px;
     border: 3px solid rgb(66, 144, 224);
@@ -20,26 +18,27 @@
 }
 
 .adrs_Panel p {
-    align-self: flex-start;
     color: rgb(66, 144, 224);
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.addrsPartitonBar {
+ .addrsPartitonBar {
+    align-self: center;
     display: flex;
     align-items: center;
     overflow-x: scroll;
     grid-row: 2;
     gap: 40px;
     grid-column: 4;
-    width: 95%;
+    width: 100%;
     height: 60%;
     border-top: 2px solid rgb(66, 144, 224);
 }
 
+
+
 .adrs_Block {
-    display: block;
     justify-content: center;
     padding: 2px 10px 2px 10px;
     align-content: inherit;
@@ -47,9 +46,9 @@
     background-color: #fff;
     border-radius: 10px;
     border: 3px solid rgb(66, 144, 224);
-    width: 300px;
-    min-width: 300px;
-    height: 200px;
+    width: 250px;
+    min-width: 250px;
+    height: 170px;
     cursor: pointer;
 }
 .active_address_Selected{
@@ -68,8 +67,58 @@
     color: rgb(66, 144, 224);
 }
 
-.adrs_row {
+.adrs_Panel .adrs_row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.addrs_grid{
+    display: grid;
+    grid-template-columns: 100px 300px 150px 400px;
+    grid-row: 25px;
+}
+
+.add_Address{
+    background-color: rgb(66, 144, 224);
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5vw;
+    color: #fff;
+    cursor: pointer;
+}
+
+.done_Button{
+    background-color: rgb(66, 144, 224);
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5vw;
+    align-self: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.default_Address p{
+    color: black;
+    text-transform: capitalize;
+    font-size: 1vw;
+}
+.adrs_row2{
+    display: flex;
+    gap: 20px;
+    width: 60%;
+}
+.addrs_Icons{
+    font-size: 1.5em;
+    color: rgb(66, 144, 224);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./AddressModule.css";
+import * as MdIcon from "react-icons/md";
 
 const sAVEDADDRESS = [
   {
@@ -50,33 +51,60 @@ const sAVEDADDRESS = [
   },
 ];
 
-export default function AddressModule({}) {
+export default function AddressModule({ data, changeAddrs,handleShowAddress }) {
+  
+  const [curentAddrs] = useState(data);
+  const [newAdrsValues, setValues] = useState(data);
+
   return (
     <>
       <div className="adrs_Panel">
-        <p>Selected Address:</p>
-        <div className="addrsPartitonBar">
-        <AddressBlocks data={sAVEDADDRESS} />
+        <div className="adrs_row">
+          <p>Current Address:</p>
+          <button className="add_Address">New +</button>
         </div>
+        <div className="default_Address">
+          <div className="addrs_grid">
+            <p>name:</p>
+            <p>{curentAddrs.name}</p>
+            <p>phone:</p>
+            <p>{curentAddrs.phone}</p>
+            <p>city:</p>
+            <p>{curentAddrs.city}</p>
+            <p>address:</p>
+            <p>{curentAddrs.address}</p>
+            <p>type:</p>
+            <p>{curentAddrs.type}</p>
+            <p>pincode:</p>
+            <p>{curentAddrs.pincode}</p>
+          </div>
+        </div>
+        <div className="addrsPartitonBar">
+          <AddressBlocks data={sAVEDADDRESS} setValues={setValues} />
+        </div>
+        <button className="done_Button" onClick={()=>{changeAddrs(newAdrsValues); handleShowAddress();}}>Done</button>
       </div>
     </>
   );
 }
 
-function AddressBlocks({data}) {
-  
-  
+function AddressBlocks({ data, setValues }) {
   const [selectedAddress, setSelecteAddress] = useState({});
-  
+
   return (
     <>
-      {data.map(item => {
+      {data.map((item) => {
         const { name, pincode, city, type, address, phone } = item;
         return (
-          // <AddressBlocks data={data}/>
           <div
-            className={`adrs_Block ${selectedAddress?.id === item?.id && "active_address_Selected"}`}
-            onClick={() => setSelecteAddress(item)}>
+            className={`adrs_Block ${
+              selectedAddress?.id === item?.id && "active_address_Selected"
+            }`}
+            onClick={() => {
+              setSelecteAddress(item);
+              setValues(item);
+            }}
+          >
             <div className="adrs_row">
               <p>{name}</p>
               <p>{phone}</p>
@@ -86,6 +114,14 @@ function AddressBlocks({data}) {
             <div className="adrs_row">
               <p>{type}</p>
               <p>{pincode}</p>
+            </div>
+            <div className="adrs_row2">
+              <button className="addrs_Icons" title="Delete">
+                <MdIcon.MdDelete />
+              </button>
+              <button className="addrs_Icons" title="Edit">
+                <MdIcon.MdEdit />
+              </button>
             </div>
           </div>
         );

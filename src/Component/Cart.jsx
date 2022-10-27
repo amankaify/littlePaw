@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import AddressModule from "./AddressModule";
 
 export default function Cart() {
-
   const [wishlistItems, setWishlistItems] = useState(() => {
     const saved = localStorage.getItem("wishlist");
     const initialValue = JSON.parse(saved);
@@ -21,16 +20,15 @@ export default function Cart() {
     const initialValue = JSON.parse(saved);
     return initialValue || "";
   });
-  
-  
+
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(cartItemData));
   }, [cartItemData]);
-  
+
   useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
   }, [wishlistItems]);
-  
+
   const [wishlist, setWishlist] = useState(false);
 
   const [emptyMessage, setemptyMessage] = useState(false);
@@ -101,8 +99,7 @@ export default function Cart() {
                   setCartItemsData={setCartItemsData}
                   wishlistItems={wishlistItems}
                   setWishlistItems={setWishlistItems}
-                  />
-                  
+                />
               );
             })}
           </div>
@@ -154,7 +151,7 @@ function Item({
   setCartItemsData,
 }) {
   const { name, price, image, rating } = data;
-  
+
   const itemDetails = {
     itemCount: 1,
   };
@@ -176,10 +173,10 @@ function Item({
 
   const [addedQty, setAddedQty] = useState(0);
 
-  let qtyPrice=0;
+  let qtyPrice = 0;
   const handleQuantity = () => {
-    setAddedQty(qtyPrice+=data?.price)
-  }
+    setAddedQty((qtyPrice += data?.price));
+  };
 
   const [quantity, setQuantity] = useState(itemDetails);
 
@@ -194,19 +191,20 @@ function Item({
         <div className="cartproductDetails">
           <div className="details_Div">
             <text className="orderName">{name}</text>
-       
+
             <text className="orderPrice">
               {price}
               <p>INR</p>
             </text>
           </div>
           <div className="details_Div">
-          <Rating
-          className="ratingBar"
-          iconsCount={5}
-          ratingValue={rating}
-          size="20px"
-          readonly={rating} />
+            <Rating
+              className="ratingBar"
+              iconsCount={5}
+              ratingValue={rating}
+              size="20px"
+              readonly={rating}
+            />
           </div>
           <div className="details_Div">
             <div>
@@ -226,7 +224,15 @@ function Item({
               <button
                 className="qntButton"
                 disabled={quantity.itemCount >= 10}
-                onClick={() =>{setQuantity({...quantity,itemCount: quantity.itemCount + 1,},handleQuantity(data))}}>+</button>
+                onClick={() => {
+                  setQuantity(
+                    { ...quantity, itemCount: quantity.itemCount + 1 },
+                    handleQuantity(data)
+                  );
+                }}
+              >
+                +
+              </button>
             </div>
             <div>
               <button
@@ -254,26 +260,46 @@ function Item({
   );
 }
 
-function TotalContainer({cartItemData,addedQty}) {
-
-  let totalPrice=0;
-  let i=0;
-  for(i;i<cartItemData.length;i++){
-    totalPrice+= cartItemData[i]?.price;   
+function TotalContainer({ cartItemData, addedQty }) {
+  let totalPrice = 0;
+  let i = 0;
+  for (i; i < cartItemData.length; i++) {
+    totalPrice += cartItemData[i]?.price;
   }
-  
+
   const shippingItemDetails = {
-    itemCount:cartItemData.length,
-    shipingAddress: "Address",
-    billingDetails: "Billing Details",
+    itemCount: cartItemData.length,
     itemsPrice: totalPrice,
     itemDiscount: "0",
     itemsTotalPrice: addedQty,
     itemDeliveryCharges: "0",
   };
 
-
   const [shippingValues] = useState(shippingItemDetails);
+
+  const [showAddressPanel, setAdderessPanel] = useState(false);
+
+  const handleShowAddress = () => {
+    if (showAddressPanel === true) {
+      setAdderessPanel(false);
+    } else setAdderessPanel(true);
+  };
+
+  const defaultAddress = {
+    name: "Aditya Srivastava",
+    pincode: "208027",
+    city: "Kanpur",
+    phone: "9044142219",
+    type: "home",
+    address: "1A World Bank Barra Sector D",
+  };
+
+  const [addrsValues, setAddressValues] = useState(defaultAddress);
+
+  const changeAddrs = (addrs) => {
+    setAddressValues(addrs)
+  }
+
 
   return (
     <>
@@ -287,16 +313,22 @@ function TotalContainer({cartItemData,addedQty}) {
 
         <div className="address">
           <h4>Shipping Address:</h4>
-          <p>{shippingValues.shipingAddress}</p>
+          <div className="shippingAddres_Row">
+            <p>{addrsValues.name}</p>
+            <p>{addrsValues.phone}</p>
+            <p></p>
+          </div>
+          <p>
+            {addrsValues.address}, {addrsValues.city}, {addrsValues.pincode}
+          </p>
         </div>
 
-        <div className="address">
-          <h4>Billing Details:</h4>
-          <p>{shippingValues.billingDetails}</p>
-        </div>
-        
-        <button className="buttonNavChangeAddrs">Change Address</button>
-      
+        <button
+          className="buttonNavChangeAddrs"
+          onClick={() => handleShowAddress()}
+        >
+          Change Address
+        </button>
         <div className="row">
           <h4>Price:</h4>
           <p>{shippingValues.itemsPrice}</p>
@@ -321,7 +353,12 @@ function TotalContainer({cartItemData,addedQty}) {
 
         <button className="buttonNav">Procced To Buy</button>
       </div>
-      <AddressModule/>
+      {showAddressPanel && (
+        <AddressModule handleShowAddress={handleShowAddress}
+          data={addrsValues}
+          changeAddrs={changeAddrs}
+        />
+      )}
     </>
   );
 }

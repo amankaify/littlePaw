@@ -25,18 +25,18 @@ function SideBar() {
             <div className="bar1"></div>
             <div className="bar2"></div>
           </Link> */}
-          <button className="sideButtons">Inbox <CgIcon.CgNotes className="sideIcons"/></button>
-          <button className="sideButtons">Activity <MdIcon.MdOutlinePendingActions className="sideIcons"/></button>
-          <button className="sideButtons">Schedule<MdIcon.MdOutlineSchedule className="sideIcons"/></button>
+          <button className="sideButtons">Inbox <CgIcon.CgNotes /></button>
+          <button className="sideButtons">Activity <MdIcon.MdOutlinePendingActions /></button>
+          <button className="sideButtons">Schedule<MdIcon.MdOutlineSchedule /></button>
           <labels className="sideLabels"></labels>
-          <button className="sideButtons">Dogs<MdIcon.MdPets className="sideIcons"/></button>
-          <button className="sideButtons">Cats<GiIcon.GiCat className="sideIcons"/></button>
-          <button className="sideButtons">Fish<TbIcon.TbFish className="sideIcons"/></button> 
-          <button className="sideButtons">My Orders<TbIcon.TbBooks className="sideIcons"/></button>
-          <button className="sideButtons">My Cart<TbIcon.TbShoppingCart className="sideIcons"/></button>
-          <button className="sideButtons">Wishlist<TbIcon.TbBookmarks className="sideIcons"/></button>
+          <button className="sideButtons">Dogs<MdIcon.MdPets/></button>
+          <button className="sideButtons">Cats<GiIcon.GiCat /></button>
+          <button className="sideButtons">Fish<TbIcon.TbFish /></button> 
+          <button className="sideButtons">My Orders<TbIcon.TbBooks /></button>
+          <button className="sideButtons">My Cart<TbIcon.TbShoppingCart /></button>
+          <button className="sideButtons">Wishlist<TbIcon.TbBookmarks /></button>
           <labels className="sideLabels"></labels>
-          <button className="sideButtons">Logout<TbIcon.TbLogout className="sideIcons"/></button>
+          <button className="sideButtons">Logout<TbIcon.TbLogout /></button>
       
       </nav>
     </>

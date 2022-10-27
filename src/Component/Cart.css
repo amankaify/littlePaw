@@ -37,7 +37,7 @@
   width: 300px;
   height: 90%;
   border-radius: 10px;
-  padding: 15px 10px;
+  padding: 10px 10px;
   align-self: flex-end;
   background-color: rgba(66, 144, 224, 0.2);
 }
@@ -57,7 +57,7 @@
 .totalContainer h4 {
   font-size: 17px;
   align-self: flex-start;
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
   font-weight: 600;
 }
 .totalContainer p {
@@ -69,10 +69,16 @@
     padding: 0;
   }
 
-  .address {
-    padding: 0 20px;
+.address p{
+  text-transform: capitalize;
+  font-size: 0.8vw;
+}
+  .shippingAddres_Row{
+    display: grid;
+    gap: 1px;
+    grid-template-columns: 100px 80px;
+    grid-template-rows: 10px 20px;
   }
-
 
 
 .buttonNavChangeAddrs {
