@@ -171,8 +171,10 @@ function DetailSection({ data }) {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(cartItems));
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
+
+ 
 
   const handleCart = (item) => {
     let arr = [...cartItems];

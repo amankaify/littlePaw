@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./AddressModule.css";
 import * as MdIcon from "react-icons/md";
+import NewAddress from "./NewAddress";
 
 const sAVEDADDRESS = [
   {
@@ -55,13 +56,20 @@ export default function AddressModule({ data, changeAddrs,handleShowAddress }) {
   
   const [curentAddrs] = useState(data);
   const [newAdrsValues, setValues] = useState(data);
+  
+  const[adrsBtn, setadrsBtn] = useState(false);
+
+  const handleNewAddrs=() => {
+    setadrsBtn(true)
+    console.log(adrsBtn);
+  }
 
   return (
     <>
       <div className="adrs_Panel">
         <div className="adrs_row">
           <p>Current Address:</p>
-          <button className="add_Address">New + </button>
+          <button className="add_Address" onClick={()=>handleNewAddrs()}>New +</button>
         </div>
         <div className="default_Address">
           <div className="addrs_grid">
@@ -83,6 +91,8 @@ export default function AddressModule({ data, changeAddrs,handleShowAddress }) {
           <AddressBlocks data={sAVEDADDRESS} setValues={setValues} />
         </div>
         <button className="done_Button" onClick={()=>{changeAddrs(newAdrsValues); handleShowAddress();}}>Done</button>
+          <NewAddress adrsBtn={adrsBtn}
+          setadrsBtn={setadrsBtn}/>
       </div>
     </>
   );

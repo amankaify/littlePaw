@@ -13,8 +13,9 @@ export default function MedicalCare() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(cartItems));
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
+
 
   const [medicalButton, setmedicalButton] = useState(false);
   const showmedicalButton = () => setmedicalButton(!medicalButton);

@@ -1,0 +1,55 @@
+.input_NewAddrs{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right:-100%;
+    top: -1px;
+    gap: 15px;
+    background-color: rgb(255, 255, 255);
+    border-left: 3px solid rgb(66,144, 224);
+    height: 100%;
+    padding: 0px 2%;
+    width: 30%;
+    transition: 0.8s;
+    justify-content: center;
+}
+
+.input_NewAddrs.active{
+    right: 0%;
+    transition: 0.8s;
+}
+
+.adrs_Input{
+    background-color: #fff;
+    border-radius: 3px;
+    outline: none;
+    height: 40px;
+    width: 300px;
+    font-size: 1.2vw;
+    color: black;
+    text-transform:capitalize;
+    border: none;
+    border-bottom: 2px solid rgb(66,144, 224);
+}
+
+.adrs_Location{
+    width: 300px;
+    background-color: rgb(66, 144, 224);
+    height: 40px;
+    border: none;
+    color: #fff;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.adrs_Cancel{
+    color: rgb(66, 144, 224);
+    font-size: 2vw;
+    background-color: transparent;
+    border: none;
+    width: min-content;
+    cursor: pointer;
+}
+
+

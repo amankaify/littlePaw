@@ -13,12 +13,16 @@ export default function Cart() {
 
   const [cartItemData, setCartItemsData] = useState([]);
 
-  useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(cartItemData));
-  }, [cartItemData]);
 
   useEffect(() => {
-    localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
+    const items = JSON.parse(localStorage.getItem('cartItems'));
+    if (items) {
+      setCartItemsData(items);
+    }
+  }, []);
+  
+  useEffect(() => {
+    window.localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
   }, [wishlistItems]);
 
   const [wishlist, setWishlist] = useState(false);
@@ -253,15 +257,14 @@ function TotalContainer({ cartItemData }) {
     totalPrice += cartItemData[i]?.price;
   }
 
-  const shippingItemDetails = {
-    itemCount: cartItemData.length,
+  const shippingValues = {
+    itemCount:cartItemData.length ,
     itemsPrice: totalPrice,
     itemDiscount: "0",
     itemsTotalPrice:"",
     itemDeliveryCharges: "0",
   };
 
-  const [shippingValues] = useState(shippingItemDetails);
 
   const [showAddressPanel, setAdderessPanel] = useState(false);
 
