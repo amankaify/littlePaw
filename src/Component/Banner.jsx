@@ -19,8 +19,8 @@ import "./Todo/Food.css";
 import FoodIcon from "./Todo/FoodIcon";
 import MedicalCare from "./Todo/MedicalCare";
 import { Link } from "react-router-dom";
-
-
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Banner() {
   return (
@@ -34,12 +34,27 @@ export default function Banner() {
 }
 
 function BannerFirst() {
+  const navigate = useNavigate();
+
+  const [cartItemData, setCartItemsData] = useState([]);
+
+  const handlePoster = () => {
+    setCartItemsData([posterProduct]);
+  };
+  
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItemData));
+    if(cartItemData?.length !== 0) navigate('/cart')
+  }, [cartItemData]);
+  
+
   return (
     <>
       <div className="bannerProducts">
         <Link
           to={{ pathname: `/item/${posterProduct.name}` }}
-          state={posterProduct} className="posterLink"
+          state={posterProduct}
+          className="posterLink"
         >
           <RoyalCaninPacket className="royalcaninPacket" />
           <div className="productDetails">
@@ -51,7 +66,9 @@ function BannerFirst() {
         <div className="quote1">Give your dog best quality product.</div>
         <RoyalCaninLogo className="royalcaninLogo" />
         <DogHeadLogo className="dogHead" />
-        <button className="buyNow">Buy Now</button>
+        <button className="buyNow" onClick={() => {handlePoster();}}>
+          Buy Now
+        </button>
       </div>
     </>
   );

@@ -89,7 +89,7 @@ export default function Cart() {
         </div>
         <div className="cartItemList">
           <div className="productsListCart">
-            {cartItemData.map((cartitem) => {
+            {cartItemData?.map((cartitem) => {
               return (
                 <Item
                   data={cartitem}

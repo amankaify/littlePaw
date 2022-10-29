@@ -1,5 +1,5 @@
 const posterProduct = {
-    id: 1,
+    id: 0,
     category: "food",
     name: "Royal Canin Maxi Breed Adult 10kg",
     price: 6273,
