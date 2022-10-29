@@ -3,54 +3,9 @@ import { useState } from "react";
 import "./AddressModule.css";
 import * as MdIcon from "react-icons/md";
 import NewAddress from "./NewAddress";
+import {SavedAddress} from "./ItemsList/SavedAddress";
 
-const sAVEDADDRESS = [
-  {
-    id: 0,
-    name: "Aman Srivastav",
-    type: "HOME",
-    pincode: 208027,
-    address: "1A World Bank Barra Sector-D",
-    phone: 9044142219,
-    city: "Kanpur",
-  },
-  {
-    id: 1,
-    name: "Muskan Srivastav",
-    type: "HOME",
-    pincode: 208027,
-    address: "1A World Bank Barra Sector-D",
-    phone: 9044142219,
-    city: "Kanpur",
-  },
-  {
-    id: 2,
-    name: "Kaify Srivastav",
-    type: "HOME",
-    pincode: 208027,
-    address: "1A World Bank Barra Sector-D",
-    phone: 9044142219,
-    city: "Kanpur",
-  },
-  {
-    id: 3,
-    name: "Charu Srivastav",
-    type: "HOME",
-    pincode: 208027,
-    address: "1A World Bank Barra Sector-D",
-    phone: 9044142219,
-    city: "Kanpur",
-  },
-  {
-    id: 4,
-    name: "Aditya Srivastav",
-    type: "HOME",
-    pincode: 208027,
-    address: "1A World Bank Barra Sector-D",
-    phone: 9044142219,
-    city: "Kanpur",
-  },
-];
+
 
 export default function AddressModule({ data, changeAddrs,handleShowAddress }) {
   //comment
@@ -88,7 +43,7 @@ export default function AddressModule({ data, changeAddrs,handleShowAddress }) {
           </div>
         </div>
         <div className="addrsPartitonBar">
-          <AddressBlocks data={sAVEDADDRESS} setValues={setValues} />
+          <AddressBlocks data={SavedAddress} setValues={setValues} />
         </div>
         <button className="done_Button" onClick={()=>{changeAddrs(newAdrsValues); handleShowAddress();}}>Done</button>
           <NewAddress adrsBtn={adrsBtn}

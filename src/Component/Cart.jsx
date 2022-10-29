@@ -303,12 +303,10 @@ function TotalContainer({ cartItemData }) {
         <div className="address">
           <h4>Shipping Address:</h4>
           <div className="shippingAddres_Row">
-            <p>{addrsValues.name}</p>
-            <p>{addrsValues.phone}</p>
-            <p></p>
+            <p>Name: {addrsValues.name}</p>
+            <p>Phone: {addrsValues.phone}</p>
           </div>
-          <p>
-            {addrsValues.address}, {addrsValues.city}, {addrsValues.pincode}
+          <p>Address: {addrsValues.address}, {addrsValues.city}, {addrsValues.pincode}
           </p>
         </div>
 

@@ -1,3 +1,7 @@
+body p{
+  text-decoration: none;
+}
+
 .bannerProducts {
   height: 500px;
   background-color: #fff;
@@ -7,6 +11,17 @@
   align-items: center;
   transition: 0.8s;
 }
+
+.posterLink {
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+
 .royalcaninLogo {
   width: 30%;
   position: absolute;
@@ -14,6 +29,7 @@
   transition: 0.8s;
   transition-delay: 0.3s;
 }
+
 .royalcaninPacket {
   width: 20%;
   position: absolute;
@@ -30,6 +46,7 @@
   transition: 0.8s;
   transition-delay: 0.3s;
 }
+
 .quote1 {
   font-size: 30px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -60,12 +77,14 @@
   transition-delay: 0.3s;
   cursor: pointer;
 }
+
 .productDetails {
   left: -100%;
   top: 20%;
   position: absolute;
   transition: 1s;
   transition-delay: 0.3s;
+  text-decoration: none;
 }
 
 .productDetails p {
@@ -73,31 +92,39 @@
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+
 }
 
 .bannerProducts:hover .royalcaninLogo {
   left: 60%;
 }
+
 .bannerProducts:hover .royalcaninPacket {
   left: 7%;
 }
+
 .bannerProducts:hover .buyNow {
   left: 30%;
 }
+
 .bannerProducts:hover .dogHead {
   width: 0%;
 }
+
 .bannerProducts:hover .quote1 {
   left: 56%;
 }
+
 .bannerProducts:hover .productDetails {
   left: 30%;
 }
 
 @media screen and (max-width: 1111px) {
   .quote1 {
-   display: none;
+    display: none;
   }
+
   .productDetails {
     left: -30%;
     top: 25%;
@@ -105,9 +132,10 @@
     transition: 1s;
     transition-delay: 0.3s;
   }
-  
+
 
 }
+
 @media screen and (max-width: 970px) {
   .buyNow {
     width: 100px;
@@ -115,6 +143,7 @@
     font-size: 15px;
     top: 40%;
   }
+
   .productDetails {
     left: -30%;
     top: 15%;
@@ -122,12 +151,14 @@
     transition: 1s;
     transition-delay: 0.3s;
   }
+
   .productDetails p {
     font-size: 15px;
     font-weight: bold;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
+
   .bannerProducts {
     height: 300px;
     background-color: #fff;
@@ -136,7 +167,7 @@
     justify-content: center;
     align-items: center;
   }
- 
+
 
 }
 
@@ -148,6 +179,7 @@
     font-size: 15px;
     top: 40%;
   }
+
   .productDetails {
     left: -30%;
     top: 20%;
@@ -155,12 +187,14 @@
     transition: 1s;
     transition-delay: 0.3s;
   }
+
   .productDetails p {
     font-size: 10px;
     font-weight: bold;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
+
   .bannerProducts {
     height: 300px;
     background-color: #fff;
@@ -169,15 +203,14 @@
     justify-content: center;
     align-items: center;
   }
- 
+
 
 }
 
 
 @media screen and (max-width: 580px) {
-.bannerProducts{
-  display: none;
-}
+  .bannerProducts {
+    display: none;
+  }
 
 }
-

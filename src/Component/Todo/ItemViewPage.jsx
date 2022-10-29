@@ -12,22 +12,10 @@ import { dentals } from "../ItemsList/Medi_Dentals";
 import { beds } from "../ItemsList/Beds";
 import { toys } from "../ItemsList/Toys";
 import Suggestions from "../Suggestions";
-import axios from "axios";
-import { FETCH_PRODUCT_API } from "../../utils/constants";
+import MedicalCare from "./MedicalCare";
 
 export default function ItemViewPage() {
   const { state } = useLocation();
-  console.log("🚀 ~ file: ItemViewPage.jsx ~ line 18 ~ ItemViewPage ~ state", useLocation())
-  // const [data, setData] = useState({});
-
-  // useEffect(()=>{
-  //   axios.get(FETCH_PRODUCT_API(1)).then(res=>{
-  //     setData(res);
-  //   }).catch(err=>{
-  //     console.log('fetch product err', err)
-  //   })
-  // },[])
-  
 
   return (
     <>
@@ -35,6 +23,8 @@ export default function ItemViewPage() {
       <ItemMainView
         data={state}
       />
+      <div style={{width:"100%", height:100, background:"rgb(66,144,224)"}}/>
+      <MedicalCare/>
     </>
   );
 }

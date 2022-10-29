@@ -22,7 +22,6 @@ const foods = [
     category: "food",
     name: "Pedigree Wet Food for Puppy",
     price: 525,
-    rating: 60,
     size: null,
     rating: 90,
     description: "Item details",
@@ -40,7 +39,6 @@ const foods = [
     price: 1503,
     rating: 60,
     size: null,
-    rating: 90,
     description: "Item details",
     image: "https://m.media-amazon.com/images/I/71CbFOjA67L._SY879_.jpg",
     images_array: [
@@ -54,7 +52,6 @@ const foods = [
     category: "food",
     name: "Kennel Kitchen Adult & Puppy Dog Food, Chicken and Lamb Chunks in Gravy, 12 Pouches",
     price: 391,
-    rating: 60,
     size: null,
     rating: 90,
     description: "Item details",
@@ -85,7 +82,6 @@ const foods = [
     category: "food",
     name: "Pedigree Tasty Minis Treats for Puppy, Chicken Flavour, 125g",
     price: 154,
-    rating: 60,
     size: null,
     rating: 90,
     description: "Item details",
@@ -134,7 +130,6 @@ const foods = [
     price: 220,
     rating: 60,
     size: null,
-    rating: 90,
     description: "Item details",
     image: "https://m.media-amazon.com/images/I/81Wm0e6AlpL._SX679_.jpg",
     images_array: [
@@ -150,7 +145,6 @@ const foods = [
     price: 289,
     rating: 60,
     size: null,
-    rating: 90,
     description: "Item details",
     image:
       "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame802_720x.png?v=1661252068",
