@@ -18,7 +18,7 @@ export default function ItemViewPage() {
   const { state } = useLocation();
 
   return (
-    <>
+    <> 
       <TopNavigation />
       <ItemMainView
         data={state}
