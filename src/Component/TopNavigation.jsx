@@ -11,7 +11,7 @@ export default function TopNavigation() {
       <>
         <div className="topNavigation">
           <div className="brandLogo">
-            <BrandIcon className="littleLogo" />
+            <BrandIcon className="littleLogo" onClick={()=>navigate("/")} />
           </div>
           <input
             className="searchBar"

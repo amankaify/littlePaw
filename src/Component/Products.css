@@ -24,6 +24,7 @@
 .littleLogo {
   width: 100px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .searchBar {
   width: 500px;

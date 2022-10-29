@@ -11,7 +11,6 @@ export default function Suggestions({ data }) {
     <>
       <Link 
         to={{ pathname: `/item/${name}` }}
-        target="_blank"
         state={data}
         className="suggestionItem"
       >
