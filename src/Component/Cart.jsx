@@ -195,7 +195,8 @@ function Item({
               ratingValue={rating}
               size="20px"
               readonly={rating}
-            />
+            />  
+            {/* Aman Srivastava */}
           </div>
           <div className="details_Div">
             <div>
